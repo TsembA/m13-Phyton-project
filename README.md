@@ -1,66 +1,58 @@
-# Inventory Data Automation with Python & Excel
+# 📊 Inventory Data Automation with Python & Excel
 
-## Overview
+## 🧾 Overview
 
-This project utilizes Python and the `openpyxl` library to automate inventory analysis in an Excel spreadsheet. It processes product data, calculates summary statistics per supplier, identifies products with low stock, and adds a column for the total value of the inventory per product. The resulting updated file is saved as a new Excel sheet.
+This project uses Python and the `openpyxl` library to automate inventory analysis in an Excel spreadsheet. It processes product data, calculates supplier statistics, identifies low-stock items, and adds a total value column for each product.
 
-## Key Features
+✅ Reads Excel data  
+✅ Computes inventory value per supplier  
+✅ Detects products with low inventory  
+✅ Saves enriched data to a new Excel file
 
-- **Data Input**: Reads product data from an Excel file (`inventory.xlsx`) in `Sheet1`.
-- **Supplier Analysis**:
-  - Counts the number of products each supplier provides.
-  - Calculates the total inventory value per supplier (inventory × price).
-- **Low Stock Detection**:
-  - Identifies and lists products with inventory less than 10 units.
-- **Data Augmentation**:
-  - Adds a new column for the total value per product (inventory × price) in the Excel sheet.
-- **Output File**: Saves the updated data to a new Excel file named `inventory_with_total_value.xlsx`.
+---
 
-## Technologies Used
+## 🛠️ Key Features
 
-- **Programming Language**: Python 3
-- **Libraries**: `openpyxl` for reading and writing Excel files.
-- **File Type**: Excel `.xlsx`
+- 📥 **Reads from** `inventory.xlsx` (Sheet1)
+- 📦 **Counts products per supplier**
+- 💰 **Calculates total inventory value** per supplier
+- ⚠️ **Flags low stock** items (< 10 units)
+- 💾 **Writes total value** per product into Excel
+- 🗂 **Saves results to** `inventory_with_total_value.xlsx`
 
-## Installation
+---
+
+## 🧰 Technologies Used
+
+- 🐍 Python 3
+- 📘 `openpyxl` library
+- 📁 Excel `.xlsx` format
+
+---
+
+## 🚀 Getting Started
 
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/yourusername/inventory-data-automation.git
-    ```
-
-2. **Navigate to the project directory**:
-    ```bash
     cd inventory-data-automation
     ```
 
-3. **Install dependencies**:
-    Ensure you have Python 3 installed, and then install the required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-    If you don't have `requirements.txt`, you can manually install `openpyxl` with:
+2. **Install dependencies**:
     ```bash
     pip install openpyxl
     ```
 
-## Usage
-
-1. Ensure your Excel file (`inventory.xlsx`) is in the same directory as the script.
-2. Run the Python script:
+3. **Run the script**:
     ```bash
     python inventory_data_automation.py
     ```
 
-3. After running the script, a new Excel file (`inventory_with_total_value.xlsx`) will be generated with:
-    - Total inventory value per product.
-    - Supplier product count.
-    - List of products with less than 10 units in stock.
+---
 
-## Sample Data
+## 📄 Sample Data
 
-### Input Example (`inventory.xlsx`)
+### Input (`inventory.xlsx`)
 
 | Product ID | Inventory | Price | Supplier Name | Total Value |
 |------------|-----------|-------|---------------|-------------|
@@ -68,7 +60,7 @@ This project utilizes Python and the `openpyxl` library to automate inventory an
 | 2          | 8         | 40.00 | Supplier B    |             |
 | 3          | 25        | 10.00 | Supplier A    |             |
 
-### Output Example (`inventory_with_total_value.xlsx`)
+### Output (`inventory_with_total_value.xlsx`)
 
 | Product ID | Inventory | Price | Supplier Name | Total Value |
 |------------|-----------|-------|---------------|-------------|
@@ -76,11 +68,11 @@ This project utilizes Python and the `openpyxl` library to automate inventory an
 | 2          | 8         | 40.00 | Supplier B    | 320.00      |
 | 3          | 25        | 10.00 | Supplier A    | 250.00      |
 
+---
 
-## Benefits
+## 💡 Benefits
 
-- **Efficiency**: Automates repetitive calculations, saving time.
-- **Financial Tracking**: Easily tracks inventory value and total stock by supplier.
-- **Low Stock Monitoring**: Flags products with low stock levels to facilitate reordering.
-- **Business Optimization**: Helps businesses make informed decisions about inventory management.
-
+- ⏱ **Saves time** by automating repetitive Excel calculations
+- 📈 **Tracks inventory value** for each supplier
+- 🛎 **Alerts on low stock** to prevent supply chain delays
+- 🧹 **Cleans up your workflow** with a single script
